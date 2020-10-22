@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script src=''></script> <!-- uploaded prebid file links here -->
+    <script src=''></script> <!-- uploaded prebid file references here -->
     <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
     <script>
         var PREBID_TIMEOUT = 1000;
@@ -13,14 +13,14 @@
             },
             bids: [
                 {bidder:'emx_digital',params:{tagid:'116684'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777340'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777341'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777342'},labelAny: []},
+                {bidder:'sovrn',params:{tagid:'777340'},labelAny: ["deskL"]},
+                {bidder:'sovrn',params:{tagid:'777341'},labelAny: ["deskL"]},
+                {bidder:'sovrn',params:{tagid:'777342'},labelAny: ["desk","deskL"]},
                 {bidder:'sovrn',params:{tagid:'777343'},labelAny: []},
                 {bidder:'sovrn',params:{tagid:'777344'},labelAny: []},
                 {bidder:'sovrn',params:{tagid:'777345'},labelAny: []},
                 {bidder:'conversant',params:{site_id:'203404',secure:'1'},labelAny: []},
-                {bidder:'triplelift',params:{inventoryCode:'CR_Desktop_header_2'},labelAny: []},
+                {bidder:'triplelift',params:{inventoryCode:'CR_Desktop_header_2'},labelAny: ["desk","deskL"]},
                 {bidder:'triplelift',params:{inventoryCode:'CR_mobile_header'},labelAny: []},
                 {bidder:'rubicon',params:{accountId:'22434',siteId:'328656',zoneId:'1861702'},labelAny: []},
                 {bidder:'appnexus',params:{placementId:'20327082'},labelAny: []},
@@ -33,12 +33,12 @@
             },
             bids: [
                 {bidder:'emx_digital',params:{tagid:'116685'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777346'},labelAny: []},
+                {bidder:'sovrn',params:{tagid:'777346'},labelAny: ["desk","deskL"]},
                 {bidder:'sovrn',params:{tagid:'777347'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777348'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777349'},labelAny: []},
+                {bidder:'sovrn',params:{tagid:'777348'},labelAny: ["desk","deskL"]},
+                {bidder:'sovrn',params:{tagid:'777349'},labelAny: ["desk","deskL"]},
                 {bidder:'conversant',params:{site_id:'203404',secure:'1'},labelAny: []},
-                {bidder:'triplelift',params:{inventoryCode:'CR_desktop_sidebar'},labelAny: []},
+                {bidder:'triplelift',params:{inventoryCode:'CR_desktop_sidebar'},labelAny: ["desk","deskL"]},
                 {bidder:'triplelift',params:{inventoryCode:'CR_mobile_sidebar'},labelAny: []},
                 {bidder:'rubicon',params:{accountId:'22434',siteId:'328656',zoneId:'1861720'},labelAny: []},
                 {bidder:'appnexus',params:{placementId:'20327139'},labelAny: []},
@@ -51,10 +51,10 @@
             },
             bids: [
                 {bidder:'emx_digital',params:{tagid:'116686'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777350'},labelAny: []},
+                {bidder:'sovrn',params:{tagid:'777350'},labelAny: ["desk","deskL"]},
                 {bidder:'sovrn',params:{tagid:'777351'},labelAny: []},
                 {bidder:'conversant',params:{site_id:'203404',secure:'1'},labelAny: []},
-                {bidder:'triplelift',params:{inventoryCode:'CR_desktop_body1'},labelAny: []},
+                {bidder:'triplelift',params:{inventoryCode:'CR_desktop_body1'},labelAny: ["desk","deskL"]},
                 {bidder:'triplelift',params:{inventoryCode:'CR_mobile_body1'},labelAny: []},
                 {bidder:'rubicon',params:{accountId:'22434',siteId:'328656',zoneId:'1861704'},labelAny: []},
                 {bidder:'appnexus',params:{placementId:'20327104'},labelAny: []},
@@ -67,10 +67,10 @@
             },
             bids: [
                 {bidder:'emx_digital',params:{tagid:'116687'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777352'},labelAny: []},
+                {bidder:'sovrn',params:{tagid:'777352'},labelAny: ["desk","deskL"]},
                 {bidder:'sovrn',params:{tagid:'777353'},labelAny: []},
                 {bidder:'conversant',params:{site_id:'203404',secure:'1'},labelAny: []},
-                {bidder:'triplelift',params:{inventoryCode:'CR_desktop_body2'},labelAny: []},
+                {bidder:'triplelift',params:{inventoryCode:'CR_desktop_body2'},labelAny: ["desk","deskL"]},
                 {bidder:'triplelift',params:{inventoryCode:'CR_mobile_body2'},labelAny: []},
                 {bidder:'rubicon',params:{accountId:'22434',siteId:'328656',zoneId:'1861706'},labelAny: []},
                 {bidder:'appnexus',params:{placementId:'20327110'},labelAny: []},
@@ -83,7 +83,7 @@
             },
             bids: [
                 {bidder:'emx_digital',params:{tagid:'116694'},labelAny: []},
-                {bidder:'sovrn',params:{tagid:'777366'},labelAny: []},
+                {bidder:'sovrn',params:{tagid:'777366'},labelAny: ["desk","deskL"]},
                 {bidder:'sovrn',params:{tagid:'777367'},labelAny: []},
                 {bidder:'sovrn',params:{tagid:'777368'},labelAny: []},
                 {bidder:'sovrn',params:{tagid:'777369'},labelAny: []},
@@ -124,7 +124,22 @@
                     }
                 },
                 priceGranularity: customPriceMap,
-                useBidCache: true
+                useBidCache: true,
+                sizeConfig:[{
+                    mediaQuery:'(min-width: 1751px)',
+                    sizeSupported: [[970,250],[970,90],[728,90]],
+                    labels:["deskL"]
+                },
+                {
+                    mediaQuery:'(min-width: 1441px) and (max-width: 1750px)',
+                    sizeSupported: [[728,90],[300,600],[300,250],[160,600],[120,600]],
+                    labels:["desk"]
+                },
+                {
+                    mediaQuery:'(min-width: 0px) and (max-width: 1440px)',
+                    sizeSupported: [[300,250],[320,100],[320,50],[300,50]],
+                    labels:["mobile"]
+                }]
             });
             pbjs.requestBids({
                 bidsBackHandler: initAdserver,
